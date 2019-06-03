@@ -1,0 +1,33 @@
+{
+    "name": "flask-boilerplate",
+    "version": "0.0.1",
+    "description": "FlaskPlay - Boilerplate built with Flask Microframework",
+    "main": "gruntfile.js",
+    "devDependencies": {
+        "rimraf": "^2.5.2"
+    },
+    "engines": {
+        "node": ">=0.10.1"
+    },
+    "scripts": {
+        "start"        : "flask run",
+        "shell"        : "flask shell",
+        "build-static" : "python ./static.py",
+        "serve-static" : "serve app/build",
+        "deploy"       : "node deploy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/simpllowebsites/simpllo.com"
+    },
+    "bugs": {
+        "url": "https://github.com/simpllowebsites/simpllo.com/issues",
+        "email": "support@appseed.us"
+    },
+    "author": "AppSeed.us <support@appseed.us> (https://appseed.us)",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "ftp-deploy": "^2.3.3"
+    }
+}
