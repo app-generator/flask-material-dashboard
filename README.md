@@ -1,10 +1,10 @@
-# [Flask Material Dashboard](https://flask-material-dashboard.appseed.us)
+# [Flask Material Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
-Live [DEMO](https://flask-material-dashboard.appseed.us) - Open-Source **Admin Dashboard** with **Material Design** coded in [Flask](http://flask.pocoo.org/)
+Open-Source **admin dashboard** with **Material Design** coded in Flask
 
 <br />
 
-![Flask Dashboard](https://github.com/app-generator/flask-material-dashboard/blob/master/screenshots/flask-material-dashboard-intro.gif)
+![Flask Material Dashboard - Gif animated intro.](https://github.com/app-generator/flask-material-dashboard/blob/master/screenshots/flask-material-dashboard-intro.gif)
 
 <br />
 
@@ -34,6 +34,8 @@ Live [DEMO](https://flask-material-dashboard.appseed.us) - Open-Source **Admin D
 
 6. Navigate to [http://localhost:5000](http://localhost:5000)
 
+<br />
+
 ## Features
 
 - SQLite database
@@ -41,9 +43,13 @@ Live [DEMO](https://flask-material-dashboard.appseed.us) - Open-Source **Admin D
 - Static Build `python ./static.py`. The static build goes to `app/build` directory 
 - FTP Deploy script. **Info**: this `require node.js` and the edit of `deploy.js` to add FTP server credentials. 
 
+<br />
+
 ## Support
 
-- For issues and features request, use [Github](https://github.com/app-generator/flask-argon-dashboard/issues/new) or join [AppSeed](https://appseed.us) community on [Discord](https://discord.gg/fZC6hup)   
+For issues and features request, use **Github** or access the [support page](https://appseed.us/support) provided by **AppSeed** 
+
+<br />
 
 ## App Screenshots
 
@@ -51,7 +57,9 @@ Live [DEMO](https://flask-material-dashboard.appseed.us) - Open-Source **Admin D
 
 <br />
 
-![Flask Dashboard](https://github.com/app-generator/flask-material-dashboard/blob/master/screenshots/flask-material-dashboard-profile.jpg)
+![Flask Dashboard Material - App Screenshot](https://github.com/app-generator/flask-material-dashboard/blob/master/screenshots/flask-material-dashboard-profile.jpg)
+
+<br />
 
 ## Resources
 
@@ -60,6 +68,7 @@ Live [DEMO](https://flask-material-dashboard.appseed.us) - Open-Source **Admin D
 3. [More Flask Apps](https://appseed.us/apps/flask-apps)
 4. [Read More about Flask Apps](https://blog.appseed.us/tag/flask)
 
----
-Made with ♥ by [AppSeed](https://appseed.us?ref=github)
+<br />
 
+---
+[Flask Material Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-material-design) provided by **AppSeed**
