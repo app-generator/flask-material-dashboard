@@ -1,6 +1,6 @@
 # [Flask Material Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
-Open-Source **admin dashboard** with **Material Design** coded in Flask
+Open-Source **admin dashboard** with **Material Design** coded in **Flask**.
 
 <br />
 
