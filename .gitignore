@@ -7,3 +7,4 @@ app/build
 yarn.lock
 yarn-error.log
 *.psd
+deploy.js
