@@ -1,23 +1,14 @@
 # -*- encoding: utf-8 -*-
 """
 Flask Boilerplate
-Author: AppSeed.us - App Generator 
+Author: AppSeed.us - App Generator
 """
 
-from flask   import json, url_for, jsonify, render_template
-from jinja2  import TemplateNotFound
-from app     import app
+from flask   import json
 
-from . models import User
-from app    import app,db,bc,mail
+from app    import app,db
 from . common import *
-from sqlalchemy import desc,or_
-import hashlib
-from flask_mail  import Message
-import re
-from flask       import render_template
 
-import      os, datetime, time, random
 
 # build a Json response
 def response( data ):
@@ -27,7 +18,7 @@ def response( data ):
 
 def g_db_commit( ):
 
-    db.session.commit( );    
+    db.session.commit( );
 
 def g_db_add( obj ):
 

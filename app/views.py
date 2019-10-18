@@ -1,19 +1,15 @@
 # -*- encoding: utf-8 -*-
 """
 Material Dashboard - coded in Flask
-Author: AppSeed.us - App Generator 
+Author: AppSeed.us - App Generator
 """
 
 # all the imports necessary
-from flask import json, url_for, redirect, render_template, flash, g, session, jsonify, request, send_from_directory
-from werkzeug.exceptions import HTTPException, NotFound, abort
-
 import os
-
-from app  import app
 
 from flask       import url_for, redirect, render_template, flash, g, session, jsonify, request, send_from_directory
 from flask_login import login_user, logout_user, current_user, login_required
+from werkzeug.exceptions import HTTPException, NotFound, abort
 from app         import app, lm, db, bc
 from . models    import User
 from . common    import COMMON, STATUS
@@ -21,7 +17,7 @@ from . assets    import *
 from . forms     import LoginForm, RegisterForm
 
 import os, shutil, re, cgi
-        
+
 # provide login manager with load_user callback
 @lm.user_loader
 def load_user(user_id):
@@ -36,7 +32,7 @@ def logout():
 # register user
 @app.route('/register.html', methods=['GET', 'POST'])
 def register():
-    
+
     # define login form here
     form = RegisterForm(request.form)
 
@@ -51,9 +47,9 @@ def register():
 
         # assign form data to variables
         username = request.form.get('username', '', type=str)
-        password = request.form.get('password', '', type=str) 
-        name     = request.form.get('name'    , '', type=str) 
-        email    = request.form.get('email'   , '', type=str) 
+        password = request.form.get('password', '', type=str)
+        name     = request.form.get('name'    , '', type=str)
+        email    = request.form.get('email'   , '', type=str)
 
         # filter User out of database through username
         user = User.query.filter_by(user=username).first()
@@ -63,15 +59,15 @@ def register():
 
         if user or user_by_email:
             msg = 'Error: User exists!'
-        
-        else:                    
+
+        else:
             pw_hash = bc.generate_password_hash(password)
 
             user = User(username, pw_hash, name, email)
 
             user.save()
 
-            msg = 'User created, please <a href="' + url_for('login') + '">login</a>'     
+            msg = 'User created, please <a href="' + url_for('login') + '">login</a>'
 
     # try to match the pages defined in -> /pages/
     return render_template( 'layouts/default.html',
@@ -81,7 +77,7 @@ def register():
 # authenticate user
 @app.route('/login.html', methods=['GET', 'POST'])
 def login():
-    
+
     # define login form here
     form = LoginForm(request.form)
 
@@ -97,13 +93,13 @@ def login():
 
         # assign form data to variables
         username = request.form.get('username', '', type=str)
-        password = request.form.get('password', '', type=str) 
+        password = request.form.get('password', '', type=str)
 
         # filter User out of database through username
         user = User.query.filter_by(user=username).first()
 
         if user:
-            
+
             if bc.check_password_hash(user.password, password):
                 login_user(user)
                 return redirect(url_for('index'))
@@ -115,7 +111,7 @@ def login():
     # try to match the pages defined in -> themes/light-bootstrap/pages/
     return render_template( 'layouts/default.html',
                             title=page_title,
-                            content=render_template( 'pages/login.html', 
+                            content=render_template( 'pages/login.html',
                                                      form=form,
                                                      msg=msg) )
 
@@ -212,24 +208,24 @@ def index(path):
 # they could use some styling so they don't look so ugly
 
 def http_err(err_code):
-	
+
     err_msg = 'Oups !! Some internal error ocurred. Thanks to contact support.'
-	
+
     if 400 == err_code:
         err_msg = "It seems like you are not allowed to access this link."
 
-    elif 404 == err_code:    
+    elif 404 == err_code:
         err_msg  = "The URL you were looking for does not seem to exist."
         err_msg += "<br /> Define the new page in /pages"
-    
-    elif 500 == err_code:    
+
+    elif 500 == err_code:
         err_msg = "Internal error. Contact the manager about this."
 
     else:
         err_msg = "Forbidden access."
 
     return err_msg
-    
+
 @app.errorhandler(401)
 def e401(e):
     return http_err( 401) # "It seems like you are not allowed to access this link."
@@ -251,4 +247,3 @@ def e403(e):
 def e410(e):
     return http_err( 410) # "The content you were looking for has been deleted."
 
-	

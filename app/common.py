@@ -1,21 +1,17 @@
 # -*- encoding: utf-8 -*-
 """
 Flask Boilerplate
-Author: AppSeed.us - App Generator 
+Author: AppSeed.us - App Generator
 """
-
-import time,datetime,calendar
-import os
-import base64
 
 #import util <--- DO NOT do this, we have circular inclusion ..
 
 class STATUS:
-    
+
     OK            = 0 # all ok
-    ERR           = 1 # generic err 
+    ERR           = 1 # generic err
     ERR_AUTH      = 2 # auth err
-    ERR_INPUT     = 3 # wrong input 
+    ERR_INPUT     = 3 # wrong input
 
 # Class for constants & data types ..
 class COMMON:
@@ -30,5 +26,5 @@ class DATATYPE:
     COUNT      =  3
     OBJ_TYPE   =  4
     CRYPTED    =  5
-    
+
 
