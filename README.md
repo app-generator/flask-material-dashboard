@@ -51,13 +51,11 @@ For issues and features request, use **Github** or access the [support page](htt
 
 <br />
 
-## App Screenshots
+## Want More? Go PRO
 
-![Flask Dashboard](https://github.com/app-generator/flask-material-dashboard/blob/master/screenshots/flask-material-dashboard-notif.jpg)
-
-<br />
-
-![Flask Dashboard Material - App Screenshot](https://github.com/app-generator/flask-material-dashboard/blob/master/screenshots/flask-material-dashboard-profile.jpg)
+| Dashboard Material | Dashboard Argon | Dashboard Black |
+| --- | --- | --- |
+| [![Flask Dashboard Material PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-material-pro-intro.gif)](https://appseed.us/admin-dashboards/flask-dashboard-material-pro)  | [![Flask Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-argon-pro-intro.gif)](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) | [![Flask Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-black-pro-intro.gif)](https://appseed.us/admin-dashboards/flask-dashboard-black-pro)
 
 <br />
 
