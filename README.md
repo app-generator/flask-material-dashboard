@@ -45,15 +45,11 @@ Open-Source **admin dashboard** with **Material Design** coded in **Flask**.
 
 <br />
 
-## Support
-
-For issues and features request, use **Github** or access the [support page](https://appseed.us/support) provided by **AppSeed** 
+### Want more dashboards? Go PRO!
 
 <br />
 
-## Want More? Go PRO
-
-| Dashboard Material | Dashboard Argon | Dashboard Black |
+| [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-pro) | [Flask Dashboard Argon](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) | [Flask Dashboard Black](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) |
 | --- | --- | --- |
 | [![Flask Dashboard Material PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-material-pro-intro.gif)](https://appseed.us/admin-dashboards/flask-dashboard-material-pro)  | [![Flask Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-argon-pro-intro.gif)](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) | [![Flask Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-black-pro-intro.gif)](https://appseed.us/admin-dashboards/flask-dashboard-black-pro)
 
