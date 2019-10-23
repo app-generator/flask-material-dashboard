@@ -1,9 +1,9 @@
 # [Flask Material Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
 Open-Source and Free **[admin dashboard](https://appseed.us/admin-dashboards)** with Material Design coded in **[Flask](https://palletsprojects.com/p/flask/)**. **Dashboard** features:
-- SQLite database
-- Login, Register
-- Static Build `python ./static.py`. The static build goes to `app/build` directory 
+- SQLite database, SQLAlchemy ORM
+- Autehtication Flow (login, register)
+- Static Build `python ./static.py` via Frozen-Flask
 - **MIT License** 
 
 <br />
