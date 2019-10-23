@@ -45,7 +45,7 @@ Open-Source **admin dashboard** with **Material Design** coded in **Flask**.
 
 <br />
 
-## Want more dashboards? Go PRO!
+## Want more? Go PRO!
 
 <br />
 
