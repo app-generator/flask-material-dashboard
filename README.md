@@ -8,7 +8,7 @@ Open-Source and Free **[admin dashboard](https://appseed.us/admin-dashboards)** 
 
 <br />
 
-![Flask Material Dashboard - Gif animated intro.](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-material-design-intro.gif)
+![Flask Material Dashboard - Open-Source Flask Dashboard.](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-material-design-intro.gif)
 
 <br />
 
