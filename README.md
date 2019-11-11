@@ -27,9 +27,9 @@ $ # install deps
 $ pip install -r requirements.txt
 $
 $ # Set the FLASK_APP environment variable
-$ (Unix) export FLASK_APP=app.py
-$ (Windows) set FLASK_APP=app.py
-$ (Powershell) $env:FLASK_APP = ".\app.py"
+$ (Unix) export FLASK_APP=run.py
+$ (Windows) set FLASK_APP=run.py
+$ (Powershell) $env:FLASK_APP = ".\run.py"
 $ 
 $ # Create SQLite database using the Flask console
 $ flask shell
