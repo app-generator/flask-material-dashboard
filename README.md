@@ -23,24 +23,23 @@ $ # install modules using a virtualenv
 $ virtualenv --no-site-packages env
 $ source env/bin/activate
 $
-$ # install deps 
+$ # install deps
 $ pip install -r requirements.txt
 $
+$ # Set the FLASK_APP environment variable
+$ (Unix) export FLASK_APP=app.py
+$ (Windows) set FLASK_APP=app.py
+$ (Powershell) $env:FLASK_APP = ".\app.py"
+$ 
 $ # Create SQLite database using the Flask console
 $ flask shell
 >> from app import db
 >> db.create_all()
->> quit() 
-$
+>> quit()
 $ # SQLite database.db should be created in the app folder:
 $ # app\database.db
 $
-$ # Set the FLASK_APP environment variable
-$ (Windows) set FLASK_APP=app.py
-$ (Unix) export FLASK_APP=app.py
-$ (Powershell) $env:FLASK_APP = ".\app.py"
-$ 
-$ flask app.py
+$ flask run
 $ # app is running on port 5000
 ```
 
