@@ -1,36 +1,26 @@
 # -*- encoding: utf-8 -*-
 """
-Flask Boilerplate
-Author: AppSeed.us - App Generator 
+License: MIT
+Copyright (c) 2019 - present AppSeed.us
 """
 
 from app         import db
 from flask_login import UserMixin
 
-from . common    import COMMON, STATUS, DATATYPE
-
 class User(UserMixin, db.Model):
 
-    id          = db.Column(db.Integer,     primary_key=True)
-    user        = db.Column(db.String(64),  unique = True)
-    email       = db.Column(db.String(120), unique = True)
-    name        = db.Column(db.String(500))
-    role        = db.Column(db.Integer)
-    password    = db.Column(db.String(500))
-    password_q  = db.Column(db.Integer)
+    id       = db.Column(db.Integer,     primary_key=True)
+    user     = db.Column(db.String(64),  unique = True)
+    email    = db.Column(db.String(120), unique = True)
+    password = db.Column(db.String(500))
 
-    def __init__(self, user, password, name, email):
+    def __init__(self, user, email, password):
         self.user       = user
         self.password   = password
-        self.password_q = DATATYPE.CRYPTED
-        self.name       = name
         self.email      = email
 
-        self.group_id = None
-        self.role     = None
-
     def __repr__(self):
-        return '<User %r>' % (self.id)
+        return str(self.id) + ' - ' + str(self.user)
 
     def save(self):
 
@@ -41,4 +31,3 @@ class User(UserMixin, db.Model):
         db.session.commit( )
 
         return self 
-
