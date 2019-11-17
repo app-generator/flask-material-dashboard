@@ -1,6 +1,6 @@
-# [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-material-dashboard)
+# [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
-**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-material-dashboard)** coded in **Flask Web Framework** on top of **Material Dashboard** design, crafted by Creative-Tim agency. **Dashboard** features:
+**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-material-design)** coded in **Flask Web Framework** on top of **Material Dashboard** design, crafted by Creative-Tim agency. **Dashboard** features:
 
 <br />
 
@@ -67,7 +67,7 @@ $ # Access the app in browser: http://127.0.0.1:5000/
 
 ## Resources
 
-- [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-material-dashboard) - Product page
+- [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
 - [Flask Dashboard Material](https://flask-material-dashboard.appseed.us/) - Live DEMO
 - [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
 - [Flask Dashboard - Open-Source Boilerplates](https://dev.to/sm0ke/flask-dashboard-open-source-boilerplates-dkg) - A popular article published on Dev.to platform
@@ -76,4 +76,4 @@ $ # Access the app in browser: http://127.0.0.1:5000/
 <br />
 
 ---
-[Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-material-dashboard) provided by **AppSeed**
+[Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) provided by **AppSeed**
