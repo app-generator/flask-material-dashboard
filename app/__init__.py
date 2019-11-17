@@ -1,34 +1,33 @@
 # -*- encoding: utf-8 -*-
 """
-Flask Boilerplate
-Author: AppSeed.us - App Generator 
+License: MIT
+Copyright (c) 2019 - present AppSeed.us
 """
 
+import os
+
 from flask            import Flask
-from flask_bootstrap  import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_login      import LoginManager
 from flask_bcrypt     import Bcrypt
-from flask_mail       import Mail
 
+# Grabs the folder where the script runs.
+basedir = os.path.abspath(os.path.dirname(__file__))
 
-# load RES
-from . import assets  
+app = Flask(__name__)
 
-app = Flask(__name__, static_url_path='/static')
+app.config.from_object('app.configuration.Config')
 
-#Configuration of application, see configuration.py, choose one and uncomment.
-#app.config.from_object('app.configuration.ProductionConfig')
-app.config.from_object('app.configuration.DevelopmentConfig')
+db = SQLAlchemy  (app) # flask-sqlalchemy
+bc = Bcrypt      (app) # flask-bcrypt
 
-# Expose globals to Jinja2 templates
-app.add_template_global(assets     , 'assets')
-app.add_template_global(app.config , 'cfg'   )
-
-db   = SQLAlchemy  (app) #flask-sqlalchemy
-lm   = LoginManager(   ) #flask-loginmanager
-bc   = Bcrypt      (app) #flask-bcrypt
-
+lm = LoginManager(   ) # flask-loginmanager
 lm.init_app(app) # init the login manager
 
+# Setup database
+@app.before_first_request
+def initialize_database():
+    db.create_all()
+
+# Import routing, models and Start the App
 from app import views, models
