@@ -13,20 +13,20 @@
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Company (disabled)</label>
-                          <input type="text" class="form-control" disabled>
+                          <label class="bmd-label-floating">UserID (disabled)</label>
+                          <input type="text" class="form-control" disabled value="{{ current_user.id }}">
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" value="{{ current_user.user }}">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
+                          <input type="email" class="form-control" value="{{ current_user.email }}">
                         </div>
                       </div>
                     </div>
