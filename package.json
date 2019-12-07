@@ -1,0 +1,28 @@
+{
+  "name": "flask-material-dashboard",
+  "version": "1.0.0",
+  "description": "Flask boilerplate suitable for admin panels.",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "devDependencies": {
+    "eslint": "5.0.0",
+    "eslint-config-google": "0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/app-generator/flask-material-dashboard"
+  },
+  "keywords": [
+    "flask",
+    "admin-dashboard"
+  ],
+  "author": "AppSeed.us",
+  "contributors": [
+    "AppSeed Support <support@appseed.us>"
+  ],
+  "license": "MIT"
+}

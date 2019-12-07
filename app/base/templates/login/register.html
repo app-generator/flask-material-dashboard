@@ -1,0 +1,85 @@
+{% extends "base-site.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title">
+            Create Account
+          </h4>
+        </div>
+        <div class="card-body">
+
+          <h6 class="card-category">
+              {% if msg %}
+                <span class="text-danger">{{ msg | safe }}</span>
+              {% else %}
+                Complete your credentials
+              {% endif %}  
+          </h6>
+          
+          <br />
+
+          <form role="form" method="post" action="">
+              
+            {{ form.hidden_tag() }} 
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Username</label>
+                  {{ form.username(class="form-control") }}
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Email</label>
+                  {{ form.email(class="form-control", type="email") }}
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Password</label>
+                  {{ form.password(class="form-control", type="password") }}
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <button type="submit" name="register" class="btn btn-primary pull-left">Register</button>
+
+            &nbsp; &nbsp; 
+            <span class="pull-right">
+              Have an account? <a href={{ url_for('base_blueprint.login') }} class="text-primary">Login</a>
+            </span>
+
+            <div class="clearfix"></div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
