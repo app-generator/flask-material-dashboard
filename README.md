@@ -1,6 +1,8 @@
 # [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
-**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-material-design)** coded in **Flask Framework** on top of **Material Dashboard** design. **Features**:
+**Open-Source Admin Dashboard** coded in **[Flask Framework](https://palletsprojects.com/p/flask/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+
+### Dashboard Features:
 
 - SQLite, PostgreSQL, SQLAlchemy ORM
 - Alembic (DB schema migrations)
@@ -113,4 +115,4 @@ Visit `http://localhost:5000` in your browser. The app should be up & running.
 <br />
 
 ---
-[Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - provided by **AppSeed**
+[Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
