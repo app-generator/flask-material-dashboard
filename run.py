@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-License: MIT
+License: Commercial
 Copyright (c) 2019 - present AppSeed.us
 """
 
@@ -20,3 +20,6 @@ except KeyError:
 
 app = create_app(config_mode) 
 Migrate(app, db)
+
+if __name__ == "__main__":
+    app.run()

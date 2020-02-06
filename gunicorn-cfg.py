@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 """
-License: MIT
+License: Commercial
 Copyright (c) 2019 - present AppSeed.us
 """
 
-bind = '0.0.0.0:5000'
+bind = '0.0.0.0:5005'
 workers = 1
 accesslog = '-'
 loglevel = 'debug'
