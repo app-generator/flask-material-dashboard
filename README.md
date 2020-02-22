@@ -150,13 +150,12 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ## Credits & Links
----
 
 <br />
 
 ## What is [Flask](https://www.palletsprojects.com/p/flask/)
 
-[Flask](https://www.palletsprojects.com/p/flask/) is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+**Flask** is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
 
 <br />
 
@@ -166,9 +165,9 @@ In information technology, a **[dashboard](https://en.wikipedia.org/wiki/Dashboa
 
 <br />
 
-## [Material Dashboard](https://www.creative-tim.com/product/material-dashboard)
+## [Material Dashboard](https://www.creative-tim.com/product/material-dashboard?ref=appseed)
 
-Material Dashboard is a free Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design. Material Dashboard was built over the popular Bootstrap 4 framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
+**Material Dashboard** is a free Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design. Material Dashboard was built over the popular Bootstrap 4 framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
 
 <br />
 
