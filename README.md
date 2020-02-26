@@ -21,7 +21,7 @@
 - [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
 - [Flask Dashboard Material](https://docs.appseed.us/admin-dashboards/flask-dashboard-material/) - Documentation
 - [Flask Dashboard Material](https://flask-dashboard-material.appseed.us/login) - LIVE demo
-- [Flask Dashboard Material PRO](https://appseed.us/admin-dashboards/flask-dashboard-material-pro) - Premium Version - [LIVE Demo](https://flask-dashboard-material-pro.appseed.us/login)
+- **[Flask Dashboard Material PRO](https://appseed.us/admin-dashboards/flask-dashboard-material-pro)** - Premium Version - [LIVE Demo](https://flask-dashboard-material-pro.appseed.us/login)
 
 <br />
 
