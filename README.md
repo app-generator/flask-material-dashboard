@@ -1,35 +1,24 @@
 # [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
-**Open-Source Admin Dashboard** coded in **[Flask Framework](https://palletsprojects.com/p/flask/)** on top of **Material Dashboard** design (free version) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
 
-<br />
-
-> **[Feedback/Suggest Feature](https://appseed.nolt.io/)**
-
-This product is **built based on community feedback**. Feel free (anonymously) to **[suggest/vote features](https://appseed.nolt.io/3)**. For more information, please access the [Facebook](https://www.facebook.com/webappseed/) page or chat with us on [Discord](https://discord.gg/fZC6hup).
-
-<br />
-
-## Dashboard Features:
-
+- UI Kit: **[Material Dashboard](https://www.creative-tim.com/product/material-dashboard?ref=appseed)** provided by **[Creative-Tim](https://www.creative-tim.com/?ref=appseed)**
+- Modular design with **Blueprints**
 - SQLite, PostgreSQL, SQLAlchemy ORM
 - Alembic (DB schema migrations)
-- Modular design with **Blueprints**
 - Session-Based authentication (via **flask_login**)
-- Forms validation
-- Deployment scripts: Docker, Gunicorn
-- UI Kit: **[Material Dashboard](https://www.creative-tim.com/product/material-dashboard?ref=appseed)** provided by **[Creative-Tim](https://www.creative-tim.com/?ref=appseed)**
+- Deployment scripts: Docker, Gunicorn / Nginx
 - **MIT License**
-- Support: Free support via **Github** and (Paid) **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
+- Free support via **Github** 
+- Paid Support **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
 
-<br />
-
-## Dashboard Links
+> Links
 
 - [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
 - [Flask Dashboard Material](https://docs.appseed.us/admin-dashboards/flask-dashboard-material/) - Documentation
 - [Flask Dashboard Material](https://flask-dashboard-material.appseed.us/login) - LIVE demo
-- **[Flask Dashboard Material PRO](https://appseed.us/admin-dashboards/flask-dashboard-material-pro)** - Premium Version - [LIVE Demo](https://flask-dashboard-material-pro.appseed.us/login)
+- More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
+- [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
 
 <br />
 
@@ -37,9 +26,9 @@ This product is **built based on community feedback**. Feel free (anonymously) t
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
 
-| [Flask Dashboard Material PRO](https://appseed.us/admin-dashboards/flask-dashboard-material-pro) | [Flask Dashboard Dashkit PRO](https://appseed.us/admin-dashboards/flask-dashboard-dashkit-pro) | [Premium Flask Dashboards](https://appseed.us/bundles/flask-admin-dashboards-pro) |
+| [Flask DattaAble Dark PRO](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-dark-pro) | [Flask Atlantis Dark PRO](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro) | [Flask StarAdmin Dark PRO](https://appseed.us/admin-dashboards/flask-dashboard-staradmin-black-pro) |
 | --- | --- | --- |
-| [![Flask Dashboard Material PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-material-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-material-pro)  | [![Flask Dashboard Dashkit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-dashkit-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-dashkit-pro) | [![Premium Flask Dashboards - Provided by AppSeed](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-black-pro-screen.png)](https://appseed.us/bundles/flask-admin-dashboards-pro)
+| [![Flask DattaAble Dark PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-dattaable-dark-pro/master/media/flask-dashboard-dattaable-dark-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-dark-pro) | [![Flask Atlantis Dark PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis-dark-pro/master/media/flask-dashboard-atlantis-dark-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro) | [![Flask StarAdmin Dark PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-staradmin-black-pro/master/media/flask-dashboard-staradmin-black-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-staradmin-black-pro)
 
 <br />
 <br />
