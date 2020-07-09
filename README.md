@@ -1,8 +1,8 @@
-# [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
+# [Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
 
-- UI Kit: **[Material Dashboard](https://www.creative-tim.com/product/material-dashboard?ref=appseed)** provided by **[Creative-Tim](https://www.creative-tim.com/?ref=appseed)**
+- UI Kit: **Material Dashboard** provided by **Creative-Tim**
 - Modular design with **Blueprints**
 - SQLite, PostgreSQL, SQLAlchemy ORM
 - Alembic (DB schema migrations)
@@ -14,11 +14,11 @@
 
 > Links
 
-- [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
-- [Flask Dashboard Material](https://docs.appseed.us/admin-dashboards/flask-dashboard-material/) - Documentation
-- [Flask Dashboard Material](https://flask-dashboard-material.appseed.us/login) - LIVE demo
-- More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
-- [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
+- [Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
+- [Flask Dashboard Material Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-material/) - App Documentation
+- [Flask Dashboard Material Demo](https://flask-dashboard-material.appseed.us/login) - LIVE app
+- More [Flask Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
+- More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
 
 <br />
 
@@ -172,4 +172,4 @@ A dashboard is a set of pages that are easy to read and offer information to the
 <br />
 
 ---
-**[Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
