@@ -1,4 +1,4 @@
-{% extends "base-site.html" %}
+{% extends "layouts/base.html" %}
 
 {% block title %} Login {% endblock %} 
 
@@ -21,11 +21,7 @@
               {% if msg %}
                 <span class="text-danger">{{ msg | safe }}</span>
               {% else %}
-              <span>
                 Use default credentials: test / pass
-                <br />
-                OR <a href={{ url_for('base_blueprint.create_user') }} >create your own user</a>
-              </span>
               {% endif %}  
           </h6>
           
@@ -61,7 +57,7 @@
 
             &nbsp; &nbsp; 
             <span class="pull-right">
-              Don't have an account? <a href={{ url_for('base_blueprint.create_user') }} class="text-primary">Create</a>
+              Don't have an account? <a href="{{ url_for('base_blueprint.register') }}" class="text-primary">Create</a>
             </span>
 
             <div class="clearfix"></div>

@@ -48,11 +48,11 @@
 <body class="">
   <div class="wrapper ">
 
-    {% include 'site_template/sidebar-rtl.html' %}
+    {% include 'includes/sidebar-rtl.html' %}
 
     <div class="main-panel">
 
-      {% include 'site_template/navigation-rtl.html' %}
+      {% include 'includes/navigation-rtl.html' %}
 
       <!-- End Navbar -->
       <div class="content">
@@ -63,16 +63,16 @@
         </div>
       </div>
 
-      {% include 'site_template/footer.html' %}
+      {% include 'includes/footer.html' %}
 
     </div>
   </div>
 
-  {% include 'site_template/fixed-plugin.html' %}
+  {% include 'includes/fixed-plugin.html' %}
 
-  {% include 'site_template/scripts.html' %}
+  {% include 'includes/scripts.html' %}
 
-  {% include 'site_template/scripts-sidebar.html' %}
+  {% include 'includes/scripts-sidebar.html' %}
   
   <!-- Specific Page JS goes HERE  -->
   {% block javascripts %}{% endblock javascripts %}
