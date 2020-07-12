@@ -16,7 +16,7 @@
 > Links
 
 - [Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
-- [Flask Dashboard Material Demo](https://flask-dashboard-material.appseed.us/login) - LIVE app
+- [Flask Dashboard Material Demo](https://flask-dashboard-material.appseed.us/) - LIVE app
 - [Boierplate Code Flask Dashboard](https://docs.appseed.us/boilerplate-code/flask-dashboard/) - Documentation
 - More [Flask Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
 - More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
@@ -34,7 +34,7 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 <br />
 <br />
 
-![Boierplate Code Flask Dashboard - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-material-design/master/media/flask-dashboard-material-design-screen.png)
+![Flask Dashboard Material Design - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-material-dashboard/master/media/flask-material-dashboard-screen.png)
 
 <br />
 
@@ -42,8 +42,8 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/flask-dashboard-material-design.git
-$ cd flask-dashboard-material-design
+$ git clone https://github.com/app-generator/flask-material-dashboard.git
+$ cd flask-material-dashboard
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
@@ -209,8 +209,8 @@ The application can be easily executed in a docker container. The steps:
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/flask-dashboard-material-design.git
-$ cd flask-dashboard-material-design
+$ git clone https://github.com/app-generator/flask-material-dashboard.git
+$ cd flask-material-dashboard
 ```
 
 > Start the app in Docker
