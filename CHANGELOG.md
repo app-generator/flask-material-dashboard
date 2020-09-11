@@ -1,5 +1,12 @@
 # Change Log
 
+## Unreleased
+### Improvements & Bug Fixes
+
+- 2020-09-11 - Improvements
+    - Codebase & UI Update
+    - Update sidebar item based on selected page
+
 ## [1.0.1] 2020-07-12
 ### Improvements
 
