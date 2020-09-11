@@ -5,76 +5,85 @@
           Flask Dashboard
         </a>
       </div>
-      {% if current_user.is_authenticated %}
+      
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          {% if current_user.is_authenticated %}
+          <li class="nav-item {% if 'index' in segment %} active {% endif %}">
             <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {% if 'page-user' in segment %} active {% endif %}">
             <a class="nav-link" href="/page-user.html">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {% if 'ui-tables' in segment %} active {% endif %}">
             <a class="nav-link" href="/ui-tables.html">
               <i class="material-icons">content_paste</i>
               <p>Table List</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {% if 'typography' in segment %} active {% endif %}">
             <a class="nav-link" href="/ui-typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {% if 'ui-icons' in segment %} active {% endif %}">
             <a class="nav-link" href="/ui-icons.html">
               <i class="material-icons">bubble_chart</i>
               <p>Icons</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {% if 'ui-maps' in segment %} active {% endif %}">
             <a class="nav-link" href="/ui-maps.html">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {% if 'ui-notifications' in segment %} active {% endif %}">
             <a class="nav-link" href="/ui-notifications.html">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
           </li>
           
-          <li class="nav-item ">
+          <li class="nav-item {% if 'rtl-support' in segment %} active {% endif %}">
             <a class="nav-link" href="/page-rtl-support.html">
               <i class="material-icons">language</i>
               <p>RTL Support</p>
             </a>
           </li>
-
           <li class="nav-item ">
             <a class="nav-link" href="{{ url_for('base_blueprint.logout') }}" >
               <i class="material-icons">directions_run</i>
               <p>Logout</p>
             </a>
           </li>
-
           <li class="nav-item active-pro ">
             <a class="nav-link" 
                target="_blank" rel="noopener noreferrer"  
-               href="https://appseed.us/admin-dashboards/flask-dashboard-material-design">
+               href="https://appseed.us/admin-dashboards/flask-dashboard-material-pro">
               <i class="material-icons">unarchive</i>
-              <p>See product</p>
+              <p>PRO Version</p>
             </a>
           </li>
+          {% else %}
+          <li class="nav-item active">
+            <a class="nav-link" 
+               target="_blank" rel="noopener noreferrer"  
+               href="https://appseed.us/admin-dashboards/flask-dashboard-material-pro">
+              <i class="material-icons">unarchive</i>
+              <p>PRO Version</p>
+            </a>
+          </li>          
+          {% endif %}
         </ul>
       </div>
-      {% endif %}
+      
 
     </div>
