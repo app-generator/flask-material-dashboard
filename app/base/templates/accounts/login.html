@@ -35,7 +35,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label class="bmd-label-floating">Username</label>
-                  <input class="form-control" placeholder="Username" type="text" name="username" value="test">
+                  {{ form.username(class="form-control") }}
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label class="bmd-label-floating">Password</label>
-                  <input class="form-control" placeholder="Password" type="password" name="password" value="pass">
+                  {{ form.password(class="form-control", type="password") }}
                 </div>
               </div>
             </div>
