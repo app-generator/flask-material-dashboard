@@ -1,0 +1,57 @@
+kind: pipeline
+name: default
+
+concurrency:
+  limit: 1
+  
+steps:
+# Create Docker image and push to HDAP Docker registry
+- name: deploy_application_image
+  image: plugins/docker
+  settings:
+    repo: gt-build.hdap.gatech.edu/african-american-women-childbirth-risk-2
+    context: app
+    dockerfile: app/Dockerfile
+    tags:
+      - latest
+
+  # Pull down the templates for deployment to HDAP K8S
+- name: get_chart_builder
+  image: docker:git
+  commands:
+    - git clone -b cs6440 https://github.gatech.edu/es130/HDAP_helm_deploy_templates.git
+
+  # Set the namespace to use for deployment
+- name: copy_namespace
+  image: busybox:1.31
+  commands:
+    - userns=`awk '/namespace:/{print $2}' ./values.yaml`
+    - sed -i "s/REPLACE_WITH_NAMESPACE/$userns/g" ./HDAP_helm_deploy_templates/deploy/Dockerfile
+
+ #Run help to build the Kubernetes config file to deploy the application
+- name: deploy_to_k8s
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run
+  commands:
+    - sleep 10
+    - docker build -t deploytok8s -f ./HDAP_helm_deploy_templates/deploy/Dockerfile .
+    - docker run deploytok8s
+
+services:
+  - name: docker
+    image: docker:dind
+    privileged: true
+    volumes:
+    - name: dockersock
+      path: /var/run
+
+volumes:
+- name: dockersock
+  temp: {}
+trigger:
+  branch:
+  - deploy
+  event:
+  - push

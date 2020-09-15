@@ -1,0 +1,25 @@
+# The namespace to deploy your application
+global:
+    namespace: ns-african-american-women-childbirth-risk-2
+
+# Default values for webapp.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+frontend:
+  #name is a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character (e.g. 'my-name',  or 'abc-123')
+  name: #rancher_step_name
+  port: 80
+  replicaCount: 1
+  proxy:
+    incomingPath: /african-american-women-childbirth-risk-2-app/
+    containerPath: "/" # The empty string "" means use same as incomingPath, otherwise the value in the string will replace the value of incomingPath when traffic is sent to the application in the deployed container
+  image:
+    repository: gt-build.hdap.gatech.edu/african-american-women-childbirth-risk-2
+    tag: latest
+    pullPolicy: Always
+  #Environment variables used by the application are placed here.
+  #Define environment variables for your container using the format below.
+#  env:
+#    ENV_1: test_env1
+#    ENV_2: test_env2
+#    ENV_3: test_env3
