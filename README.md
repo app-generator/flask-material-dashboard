@@ -1,4 +1,4 @@
-# [Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
+# [Flask Dashboard - Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
 
@@ -9,17 +9,15 @@
 - Session-Based authentication (via **flask_login**)
 - Forms validation
 - Deployment scripts: Docker, Gunicorn / Nginx, Heroku
-- **[MIT License](https://github.com/app-generator/license-mit)**
-- Free support via **Github** issues tracker
-- Paid 24/7 Live Support via [Discord](https://discord.gg/fZC6hup).
+- Support via **Github** and [Discord](https://discord.gg/fZC6hup).
+
+<br />
 
 > Links
 
-- [Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Product page
-- [Flask Dashboard Material Demo](https://flask-dashboard-material.appseed.us/) - LIVE app
-- [Boierplate Code Flask Dashboard](https://docs.appseed.us/boilerplate-code/flask-dashboard/) - Documentation
-- More [Flask Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
-- More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
+- [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - product page
+- [Flask Dashboard Material - Demo](https://flask-dashboard-material.appseed.us/) - LIVE app
+- [Flask Dashboard Material - Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-material/) - Documentation
 
 <br />
 
