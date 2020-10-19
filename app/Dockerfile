@@ -1,11 +1,8 @@
-FROM python:3.6
-
-ENV FLASK_APP run.py
-
-COPY run.py gunicorn-cfg.py requirements.txt config.py .env ./
-COPY app app
-
-RUN pip install -r requirements.txt
-
-EXPOSE 5005
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]
+#dockerfile
+FROM tiangolo/uwsgi-nginx-flask:python3.6
+ARG ENV
+COPY requirements.txt /tmp/
+RUN pip install -U pip
+RUN pip install -r /tmp/requirements.txt
+COPY . /app
+RUN if [ "$ENV" = "test" ] ; then mv proxy.py main.py ; else mv run.py main.py && rm proxy.py ; fi
