@@ -33,7 +33,7 @@ def configure_database(app):
         db.session.remove()
 
 def create_app(config):
-    app = Flask(__name__, static_folder='base/static')
+    app = Flask(__name__)
     app.config.from_object(config)
     register_extensions(app)
     register_blueprints(app)
