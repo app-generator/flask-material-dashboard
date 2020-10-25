@@ -14,9 +14,19 @@ from flask_login import (
 from app import db, login_manager
 from app.base import blueprint
 from app.base.forms import LoginForm, CreateAccountForm
-from app.base.models import User
+from app.base.models import User, getstaticdata
+
+"""
+result = getstaticdata("support", 1), iterate this list to display results
+result = getstaticdata("support", 1)
+    print(result)
+"""
+
 
 from app.base.util import verify_pass
+
+
+
 
 @blueprint.route('/')
 def route_default():
@@ -35,6 +45,9 @@ def login():
 
         # Locate user
         user = User.query.filter_by(username=username).first()
+
+
+
         
         # Check the password
         if user and verify_pass( password, user.password):
@@ -61,6 +74,7 @@ def register():
 
         # Check usename exists
         user = User.query.filter_by(username=username).first()
+
         if user:
             return render_template( 'accounts/register.html', 
                                     msg='Username already registered',
