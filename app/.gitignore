@@ -1,0 +1,15 @@
+__pycache__/
+*.sqlite3
+*.pytest_cache
+.coverage
+*.py[cod]
+*.db
+*.log
+venv
+env
+.DS_Store
+_build
+_static
+_template
+package-lock.json
+.vscode/symbols.json

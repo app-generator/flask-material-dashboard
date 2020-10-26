@@ -6,3 +6,4 @@ flask_sqlalchemy==2.*
 email_validator
 python-decouple
 gunicorn
+werkzeug==0.16.0

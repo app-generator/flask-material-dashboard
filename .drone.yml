@@ -53,5 +53,6 @@ volumes:
 trigger:
   branch:
   - deploy
+  - master
   event:
   - push
