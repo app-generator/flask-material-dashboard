@@ -128,6 +128,54 @@ class Support(db.Model):
     poisoncontrolcontactinfo = Column(String)
     poisoncontroldesc = Column(String)
 
+
+class Patient(db.Model):
+    __tablename__ = "Patient"
+
+    patient_id = Column(String, primary_key=True)
+    first_Name = Column(String)
+    last_Name = Column(String)
+    middle_Name = Column(String)
+    due_Date = Column(String)
+    date_OfBirth = Column(String)
+    date_Registered = Column(String)
+
+
+class Patient_Symptoms(db.Model):
+    __tablename__ = "Patient_Symptoms"
+
+    patient_id = Column(String, primary_key=True)
+    created_time = Column(String)
+    updated_time = Column(String)
+    has_Nausea = Column(String)
+    has_StomachPain = Column(String)
+    has_BodyAches = Column(String)
+    has_MoodSwings = Column(String)
+    has_Constipation = Column(String)
+    has_ChestPain = Column(String)
+    has_WeightGain = Column(String)
+    has_Bloating = Column(String)
+
+
+class HealthChecks(db.Model):
+    __tablename__ = "HealthChecks"
+
+    patient_id = Column(String, primary_key=True)
+    week = Column(String)
+    date_Completed = Column(String)
+    date_Updated = Column(String)
+    healthcheck_Name = Column(String)
+
+
+class Login(db.Model):
+    __tablename__ = "Login"
+
+    email = Column(String, primary_key=True)
+    password = Column(String)
+    patient_id = Column(String)
+
+
+
 def getstaticdata(table, week):
     db = SQLAlchemy()
     con = db.create_engine('sqlite:///db.sqlite3', {})
