@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Flask Dashboard - Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
@@ -308,3 +309,6 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 ---
 [Flask Dashboard - Material Design](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+=======
+# Reducing-the-Risk-and-Fatality-Rate-of-African-American-Women-in-Childbirth-2
+>>>>>>> 9659a12af8f21ca279aeb7941bb9d202d94801ba

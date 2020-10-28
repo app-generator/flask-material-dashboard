@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -26,3 +27,13 @@ _templates
 # javascript
 package-lock.json
 .vscode/symbols.json
+=======
+
+.idea/workspace.xml
+.DS_Store
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/Reducing-the-Risk-and-Fatality-Rate-of-African-American-Women-in-Childbirth-2.iml
+.idea/vcs.xml
+>>>>>>> 9659a12af8f21ca279aeb7941bb9d202d94801ba
