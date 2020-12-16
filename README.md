@@ -18,7 +18,6 @@ Material Dashboard is a free Material Bootstrap 4 Admin with a fresh, new design
 <br />
 
 > Links
-> Links
 
 - [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - product page
 - [Flask Dashboard Material - Demo](https://flask-dashboard-material.appseed.us/) - LIVE app
