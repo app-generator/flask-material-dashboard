@@ -1,22 +1,20 @@
 {
-  "name": "flask-dashboard-material-design",
-  "mastertemplate": "boilerplate-code-flask-dashboard",
-  "version": "1.0.1",
-  "description": "Template project - Flask Boilerplate Code",
-  "repository": {
-      "type": "git",
-      "url": "https://github.com/app-generator/flask-dashboard-material-design"
-  },
-  "bugs": {
-      "url": "https://github.com/app-generator/flask-dashboard-material-design/issues",
-      "email": "support@appseed.us"
-  },
-  "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
-  "engines": {
-      "node": ">=10.0.0"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-  }
+    "name": "flask-material-dashboard",
+    "mastertemplate": "boilerplate-code-flask-dashboard",
+    "version": "1.0.2",
+    "description": "Template project - Flask Boilerplate Code",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/app-generator/flask-material-dashboard"
+    },
+    "bugs": {
+        "url": "https://github.com/app-generator/flask-material-dashboard/issues",
+        "email": "support@appseed.us"
+    },
+    "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
 }
