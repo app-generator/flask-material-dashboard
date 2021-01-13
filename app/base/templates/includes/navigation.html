@@ -3,7 +3,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            <a class="navbar-brand" href="#pablo">Material Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -12,8 +12,9 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
 
-          {% if current_user.is_authenticated %}
           <div class="collapse navbar-collapse justify-content-end">
+          {% if current_user.is_authenticated %}
+
             <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -62,7 +63,9 @@
                 </div>
               </li>
             </ul>
-          </div>
+
           {% endif %}
+          </div>
+        
         </div>
       </nav>

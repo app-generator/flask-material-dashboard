@@ -2,13 +2,13 @@
       <div class="logo">
         <a target="_blank" rel="noopener noreferrer" 
            href="https://appseed.us/admin-dashboards/flask-dashboard-material-design" class="simple-text logo-normal">
-          Flask Dashboard
+          Flask Material
         </a>
       </div>
-      
       <div class="sidebar-wrapper">
         <ul class="nav">
-          {% if current_user.is_authenticated %}
+        {% if current_user.is_authenticated %}
+
           <li class="nav-item {% if 'index' in segment %} active {% endif %}">
             <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
@@ -27,7 +27,7 @@
               <p>Table List</p>
             </a>
           </li>
-          <li class="nav-item {% if 'typography' in segment %} active {% endif %}">
+          <li class="nav-item {% if 'ui-typography' in segment %} active {% endif %}">
             <a class="nav-link" href="/ui-typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
@@ -52,18 +52,20 @@
             </a>
           </li>
           
-          <li class="nav-item {% if 'rtl-support' in segment %} active {% endif %}">
+          <li class="nav-item ">
             <a class="nav-link" href="/page-rtl-support.html">
               <i class="material-icons">language</i>
               <p>RTL Support</p>
             </a>
           </li>
+
           <li class="nav-item ">
             <a class="nav-link" href="{{ url_for('base_blueprint.logout') }}" >
               <i class="material-icons">directions_run</i>
               <p>Logout</p>
             </a>
           </li>
+
           <li class="nav-item active-pro ">
             <a class="nav-link" 
                target="_blank" rel="noopener noreferrer"  
@@ -72,7 +74,9 @@
               <p>PRO Version</p>
             </a>
           </li>
-          {% else %}
+
+        {% else %}
+
           <li class="nav-item active">
             <a class="nav-link" 
                target="_blank" rel="noopener noreferrer"  
@@ -81,9 +85,9 @@
               <p>PRO Version</p>
             </a>
           </li>          
-          {% endif %}
+
+        {% endif %}
         </ul>
       </div>
-      
 
     </div>
