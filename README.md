@@ -18,8 +18,8 @@
 > Links
 
 - [Flask Dashboard Material](https://appseed.us/admin-dashboards/flask-dashboard-material-design) - product page
-- [Flask Dashboard Material - Demo](https://flask-material-dashboard.appseed-srv1.com/) - LIVE app
-- [Flask Tutorial](https://github.com/app-generator/tutorial-flask) - Getting started with Flask
+- [Flask Dashboard Material](https://flask-material-dashboard.appseed-srv1.com/) - LIVE deployment
+- [Flask Dashboard Material](https://docs.appseed.us/products/flask-dashboards/material-dashboard) - product documentation
 
 <br />
 
