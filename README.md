@@ -35,9 +35,8 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 | [![Flask Datta PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-dattaable-pro/master/media/flask-dashboard-dattaable-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-pro) | [![Flask Soft PRO](https://user-images.githubusercontent.com/51070104/131249807-f256efc6-2256-4bb1-9367-cc50ddd7ce18.png)](https://appseed.us/product/flask-soft-ui-dashboard-pro) | [![Flask Volt PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-volt-pro/master/media/flask-dashboard-volt-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-volt-pro)
 
 <br />
-<br />
 
-![Flask Dashboard Material Design - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-material-dashboard/master/media/flask-material-dashboard-screen.png)
+![Flask Dashboard Material Design - Template project provided by AppSeed.](https://user-images.githubusercontent.com/51070104/138474101-7a46215e-daa8-489d-b811-19eb1c3ce4da.gif)
 
 <br />
 
