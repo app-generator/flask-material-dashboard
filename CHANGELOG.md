@@ -4,7 +4,7 @@
 ### Fixes
 
 - 2021-11-08 - `v1.0.6-rc1`
-  - ImportError: cannot import name 'TextField' from 'wtforms'
+  - ImportError: [cannot import name 'TextField' from 'wtforms'](https://docs.appseed.us/content/how-to-fix/cannot-import-name-textfield-from-wtforms)
     - Problem caused by `WTForms-3.0.0`
     - Fix: use **WTForms==2.3.3**
     
