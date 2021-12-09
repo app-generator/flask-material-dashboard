@@ -38,9 +38,7 @@ $ cd flask-material-dashboard
 > Start the app in Docker
 
 ```bash
-$ docker-compose pull   # download dependencies 
-$ docker-compose build  # local set up
-$ docker-compose up -d  # start the app 
+$ docker-compose up --build
 ```
 
 Visit `http://localhost:85` in your browser. The app should be up & running.
