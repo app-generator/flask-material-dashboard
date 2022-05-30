@@ -1,0 +1,23 @@
+{
+    "backend": "flask",
+    "db_name": "",
+    "db_pass": "",
+    "db_type": "mysql",
+    "db_user": "",
+    "dbms": "1",
+    "description": "generated product",
+    "design": "material-dashboard",
+    "docker": "1",
+    "err_code": 0,
+    "frontend": "",
+    "heroku": "0",
+    "pattern": "mvc",
+    "pro": "0",
+    "task_id": "8f684475-ec20-44a5-a420-3a5c5a9a24ec",
+    "task_info": "Task is finished",
+    "task_output": "8f684475-ec20-44a5-a420-3a5c5a9a24ec.zip",
+    "task_result": "SUCCESS",
+    "task_state": "FINISHED",
+    "task_ts_end": "2022-05-30-21-23-01",
+    "task_ts_start": "2022-05-30-21-22-38"
+}
