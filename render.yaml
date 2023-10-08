@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: flask-mat-dashboard
+    name: flask-material-dashboard
     plan: starter
     env: python
     region: frankfurt  # region should be same as your database region.
