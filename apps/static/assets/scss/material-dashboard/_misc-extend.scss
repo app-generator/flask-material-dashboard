@@ -13,16 +13,6 @@
   box-shadow: $device-wrapper-box-shadow;
 }
 
-// sidebar caret RTL
-.rotate-caret {
-  .collapse {
-    .nav-link:after {
-      margin-right: auto;
-      margin-left: 0;
-    }
-  }
-}
-
 .z-index2 {
   z-index: $z-index2;
 }
@@ -39,11 +29,15 @@
     background-position: 0 50%;
   }
 }
+
+.line-height-0{
+  line-height: 0;
+}
 // Colored Shadow on Cards images
 .colored-shadow {
-  transform: scale($colored-shadow-scale);
-  top: $colored-shadow-top;
-  filter: blur($colored-shadow-blur);
+  transform: scale(0.92);
+  top: 1.5%;
+  filter: blur(12px);
   position: absolute;
   left: 0;
   width: 100%;
@@ -241,4 +235,35 @@ round-slider.scaling:hover {
 // Coming Soon Page
 .transform-rotate {
   transform: $coming-rotate-transform;
+}
+
+// validation
+
+.input-group {
+  small {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 5px;
+    visibility: hidden;
+  }
+
+  &.is-valid {
+    input {
+      border-color: $success;
+    }
+    small {
+      color: $success;
+      visibility: visible;
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border-color: $danger;    
+    }
+    small {
+      color: $danger;
+      visibility: visible;
+    }
+  }
 }

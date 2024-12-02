@@ -9,7 +9,8 @@ from flask_login import (
     login_user,
     logout_user
 )
-
+from flask_dance.contrib.github import github
+from apps.config import Config
 from apps import db, login_manager
 from apps.authentication import blueprint
 from apps.authentication.forms import LoginForm, CreateAccountForm
@@ -24,6 +25,15 @@ def route_default():
 
 
 # Login & Registration
+
+@blueprint.route("/github")
+def login_github():
+    """ Github login """
+    if not github.authorized:
+        return redirect(url_for("github.login"))
+
+    res = github.get("/user")
+    return redirect(url_for('home_blueprint.index'))
 
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
@@ -44,12 +54,12 @@ def login():
             return redirect(url_for('authentication_blueprint.route_default'))
 
         # Something (user or pass) is not ok
-        return render_template('accounts/login.html',
+        return render_template('pages/sign-in.html',
                                msg='Wrong user or password',
                                form=login_form)
 
     if not current_user.is_authenticated:
-        return render_template('accounts/login.html',
+        return render_template('pages/sign-in.html',
                                form=login_form)
     return redirect(url_for('home_blueprint.index'))
 
@@ -65,7 +75,7 @@ def register():
         # Check usename exists
         user = Users.query.filter_by(username=username).first()
         if user:
-            return render_template('accounts/register.html',
+            return render_template('pages/sign-up.html',
                                    msg='Username already registered',
                                    success=False,
                                    form=create_account_form)
@@ -73,7 +83,7 @@ def register():
         # Check email exists
         user = Users.query.filter_by(email=email).first()
         if user:
-            return render_template('accounts/register.html',
+            return render_template('pages/sign-up.html',
                                    msg='Email already registered',
                                    success=False,
                                    form=create_account_form)
@@ -86,13 +96,13 @@ def register():
         # Delete user from session
         logout_user()
         
-        return render_template('accounts/register.html',
+        return render_template('pages/sign-up.html',
                                msg='Account created successfully.',
                                success=True,
                                form=create_account_form)
 
     else:
-        return render_template('accounts/register.html', form=create_account_form)
+        return render_template('pages/sign-up.html', form=create_account_form)
 
 
 @blueprint.route('/logout')
@@ -103,9 +113,18 @@ def logout():
 
 # Errors
 
+
+@blueprint.context_processor
+def is_github():
+    if Config.GITHUB_ID and Config.GITHUB_SECRET:
+        return {'is_github': True}
+    
+    return {'is_github': False}
+
+
 @login_manager.unauthorized_handler
 def unauthorized_handler():
-    return render_template('home/page-403.html'), 403
+    return redirect('/login')
 
 
 @blueprint.errorhandler(403)

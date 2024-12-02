@@ -15,7 +15,7 @@
     };
 
     if (document.getElementsByClassName('navbar-collapse')[0]) {
-      var fixedplugin = document.querySelector('.navbar-collapse');
+      var fixedplugin = document.querySelector('.navbar:not(.navbar-expand-lg) .navbar-collapse');
       var ps2 = new PerfectScrollbar(fixedplugin);
     };
 
@@ -178,7 +178,7 @@ function sidebarType(a) {
 
   // Remove text-white/text-dark classes
   if (color == 'bg-transparent' || color == 'bg-white') {
-    var textWhites = document.querySelectorAll('.sidenav .text-white');
+    var textWhites = document.querySelectorAll('.sidenav .text-white:not(.nav-link-text):not(.active)');
     for (let i = 0; i < textWhites.length; i++) {
       textWhites[i].classList.remove('text-white');
       textWhites[i].classList.add('text-dark');
@@ -619,18 +619,20 @@ function toggleSidenav() {
 
 let referenceButtons = document.querySelector('[data-class]');
 
-window.addEventListener("resize", navbarColorOnResize);
+if (sidenav) {
+  window.addEventListener("resize", navbarColorOnResize);
 
-function navbarColorOnResize() {
-  if (window.innerWidth > 1200) {
-    if (referenceButtons.classList.contains('active') && referenceButtons.getAttribute('data-class') === 'bg-transparent') {
-      sidenav.classList.remove('bg-white');
+  function navbarColorOnResize() {
+    if (window.innerWidth > 1200) {
+      if (referenceButtons?.classList.contains('active') && referenceButtons?.getAttribute('data-class') === 'bg-transparent') {
+        sidenav.classList.remove('bg-white');
+      } else {
+        sidenav.classList.add('bg-white');
+      }
     } else {
       sidenav.classList.add('bg-white');
+      sidenav.classList.remove('bg-transparent');
     }
-  } else {
-    sidenav.classList.add('bg-white');
-    sidenav.classList.remove('bg-transparent');
   }
 }
 
@@ -667,8 +669,8 @@ function darkMode(el) {
   const secondary = document.querySelectorAll('.text-secondary');
   const bg_gray_100 = document.querySelectorAll('.bg-gray-100');
   const bg_gray_600 = document.querySelectorAll('.bg-gray-600');
-  const btn_text_dark = document.querySelectorAll('.btn.btn-link.text-dark, .material-icons.text-dark');
-  const btn_text_white = document.querySelectorAll('.btn.btn-link.text-white, .material-icons.text-white');
+  const btn_text_dark = document.querySelectorAll('.btn.btn-link.text-dark, .material-symbols-rounded.text-dark');
+  const btn_text_white = document.querySelectorAll('.btn.btn-link.text-white, .material-symbols-rounded.text-white');
   const card_border = document.querySelectorAll('.card.border');
   const card_border_dark = document.querySelectorAll('.card.border.border-dark');
 
@@ -807,3 +809,56 @@ function darkMode(el) {
     el.removeAttribute("checked");
   }
 };
+
+
+// side bullets
+
+const indicators = document.querySelectorAll(".indicator");
+const sections = document.querySelectorAll("section");
+
+if (indicators) {
+  const resetCurrentActiveIndicator = () => {
+    const activeIndicator = document.querySelector(".indicator.active");
+    if (activeIndicator) {
+      activeIndicator.classList.remove("active");
+    }
+  };
+
+  const onSectionLeavesViewport = (section) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            resetCurrentActiveIndicator();
+            const element = entry.target;
+            const indicator = document.querySelector(`a[href='#${element.id}']`);
+            if (indicator) {
+              indicator.classList.add("active");
+            }
+            return;
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.75
+      }
+    );
+    observer.observe(section);
+  };
+
+  indicators.forEach((indicator) => {
+    indicator.addEventListener("click", function(event) {
+      event.preventDefault();
+      document
+        .querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+      resetCurrentActiveIndicator();
+      this.classList.add("active");
+    });
+  });
+
+  sections.forEach(onSectionLeavesViewport);
+}

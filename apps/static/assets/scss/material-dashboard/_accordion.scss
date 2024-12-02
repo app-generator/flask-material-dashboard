@@ -4,6 +4,10 @@
     font-size: inherit !important;
   }
 
+  .accordion-item {
+    color: $body-color;
+  }
+
   div {
     button[aria-expanded='true'] {
       .collapse-close {

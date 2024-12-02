@@ -1,10 +1,14 @@
-// Blur effect
+// update <html> tag border
+html {
+  border: none !important;
+}
 
+// Blur effect
 .blur {
   box-shadow: $blur-box-shadow;
   -webkit-backdrop-filter: $blur-backdrop-filter;
   backdrop-filter: $blur-backdrop-filter;
-  background-color: $card-background-blur !important;
+  background-color: rgba(#fff, .9) !important;
 
   &.saturation-less {
     -webkit-backdrop-filter: $blur-backdrop-filter-less;
@@ -24,7 +28,7 @@
 }
 
 .shadow-blur {
-  box-shadow: $shadow-blur-box-shadow !important;
+  box-shadow: inset 0 0px 1px 1px rgba(254, 254, 254, 0.7), 0 3px 12px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
 .shadow-card {
@@ -32,9 +36,9 @@
 }
 
 .navbar-blur {
-  -webkit-backdrop-filter: $blur-backdrop-filter;
-  backdrop-filter: $blur-backdrop-filter;
-  background-color: rgba($white, .58) !important;
+  -webkit-backdrop-filter: $navbar-blur-backdrop-filter;
+  backdrop-filter: $navbar-blur-backdrop-filter;
+  background-color: rgba(#fff, .9) !important;
 }
 
 .blur-section {
@@ -74,6 +78,11 @@
   }
 }
 
+hr {
+  border-top: none;
+  height: 1px;
+}
+
 // Vertical Line
 hr.vertical {
   position: absolute;
@@ -84,11 +93,11 @@ hr.vertical {
   width: 1px;
 
   &.light {
-    background-color: $hr-bg-color-light;
+    background-image: $hr-bg-color-light;
   }
 
   &.dark {
-    background-color: $hr-bg-color-dark;
+    background-image: $hr-bg-color-dark;
   }
 
   &.gray-light {
@@ -101,10 +110,10 @@ hr.horizontal {
   background-color: $hr-bg-color;
 
   &.light {
-    background-color: $hr-bg-color-light;
+    background-image: $hr-bg-color-light;
   }
   &.dark {
-    background-color: $hr-bg-color-dark;
+    background-image: $hr-bg-color-dark;
   }
 
   &.gray-light {
@@ -308,7 +317,6 @@ hr.horizontal {
 @include media-breakpoint-up(lg) {
   .virtual-reality {
     .sidenav {
-      margin-top: $spacer * 2;
       animation-name: $animation-name;
       animation-fill-mode: $animation-mode;
       animation-duration: $animation-duration;
@@ -362,4 +370,73 @@ hr.horizontal {
   height: $border-right-after-height;
   width: $border-right-after-width;
   border-right: 1px solid $border-right-after-border-color;
+}
+
+// sidebar caret RTL
+.rotate-caret {
+  .collapse {
+    .nav-link:after {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .g-sidenav-hidden.rtl .main-content {
+    margin-right: 7rem!important; 
+  }
+}
+
+// perfectScrollbar on RTL page
+.rtl {
+  .ps__rail-y {
+    right: auto !important;
+    left: 0;
+  }
+
+  .start-0 {
+    right: 0 !important;
+  }
+  .end-0 {
+    left: 0 !important;
+  }
+}
+
+// Side Bullets - Scroll to section
+
+
+.bullets {
+  position: sticky;
+  top: 30%;
+  height: 0;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+}
+
+.bullets ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  list-style-type: none;
+  margin-right: -1rem;
+}
+
+.bullets ul li .indicator {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: $primary;
+}
+
+.bullets ul li .active {
+  transform: scale(1.3);
+  transition: transform 200ms ease-in-out;
+}
+
+.img-material-tw {
+  object-fit: cover;
 }
