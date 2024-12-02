@@ -1,5 +1,5 @@
 {% extends "layouts/base.html" %}
-{% load static %}
+
 
 {% block content %}
 
@@ -10,7 +10,7 @@
             <div class="col-xl-6 mb-xl-0 mb-4">
               <div class="card bg-transparent shadow-xl">
                 <div class="overflow-hidden position-relative border-radius-xl">
-                  <img src="{% static "assets/img/illustrations/pattern-tree.svg" %}" class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-100" alt="pattern-tree">
+                  <img src="{{ url_for('static', filename='assets/img/illustrations/pattern-tree.svg') }}" class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-100" alt="pattern-tree">
                   <span class="mask bg-gradient-dark opacity-10"></span>
                   <div class="card-body position-relative z-index-1 p-3">
                     <i class="material-symbols-rounded text-white p-2">wifi</i>
@@ -27,7 +27,7 @@
                         </div>
                       </div>
                       <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
-                        <img class="w-60 mt-2" src="{% static "assets/img/logos/mastercard.png" %}" alt="logo">
+                        <img class="w-60 mt-2" src="{{ url_for('static', filename='assets/img/logos/mastercard.png') }}" alt="logo">
                       </div>
                     </div>
                   </div>
@@ -84,14 +84,14 @@
                   <div class="row">
                     <div class="col-md-6 mb-md-0 mb-4">
                       <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                        <img class="w-10 me-3 mb-0" src="{% static "assets/img/logos/mastercard.png" %}" alt="logo">
+                        <img class="w-10 me-3 mb-0" src="{{ url_for('static', filename='assets/img/logos/mastercard.png') }}" alt="logo">
                         <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
                         <i class="material-symbols-rounded ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                        <img class="w-10 me-3 mb-0" src="{% static "assets/img/logos/visa.png" %}" alt="logo">
+                        <img class="w-10 me-3 mb-0" src="{{ url_for('static', filename='assets/img/logos/visa.png') }}" alt="logo">
                         <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248</h6>
                         <i class="material-symbols-rounded ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
                       </div>

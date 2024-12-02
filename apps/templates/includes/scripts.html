@@ -1,12 +1,12 @@
-{% load static %}
+
 
 
 
   <!--   Core JS Files   -->
-  <script src="{% static "assets/js/core/popper.min.js" %}"></script>
-  <script src="{% static "assets/js/core/bootstrap.min.js" %}"></script>
-  <script src="{% static "assets/js/plugins/perfect-scrollbar.min.js" %}"></script>
-  <script src="{% static "assets/js/plugins/smooth-scrollbar.min.js" %}"></script>
+  <script src="{{ url_for('static', filename='assets/js/core/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/core/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
 
 
   <script>
@@ -21,4 +21,4 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{% static "assets/js/material-dashboard.min.js" %}?v=3.2.0"></script>
+  <script src="{{ url_for('static', filename='assets/js/material-dashboard.min.js') }}?v=3.2.0"></script>

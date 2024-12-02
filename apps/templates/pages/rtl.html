@@ -1,4 +1,4 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -11,7 +11,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute start-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand px-4 py-3 m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
-        <img src="{% static "assets/img/logo-ct-dark.png" %}" class="navbar-brand-img" width="26" height="26" alt="main_logo">
+        <img src="{{ url_for('static', filename='assets/img/logo-ct-dark.png') }}" class="navbar-brand-img" width="26" height="26" alt="main_logo">
         <span class="me-1 text-sm text-dark">Creative Tim</span>
       </a>
     </div>
@@ -19,43 +19,43 @@
     <div class="collapse navbar-collapse px-0 w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url "index" %}">
+          <a class="nav-link text-dark" href="{{ url_for('home_blueprint.index') }}">
             <i class="material-symbols-rounded opacity-10">dashboard</i>
             <span class="nav-link-text me-1">لوحة القيادة</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url "tables" %}">
+          <a class="nav-link text-dark" href="{{ url_for('home_blueprint.tables') }}">
             <i class="material-symbols-rounded opacity-10">table_view</i>
             <span class="nav-link-text me-1">الجداول</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url "billing" %}">
+          <a class="nav-link text-dark" href="{{ url_for('home_blueprint.billing') }}">
             <i class="material-symbols-rounded opacity-10">receipt_long</i>
             <span class="nav-link-text me-1">الفواتير</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url "virtual_reality" %}">
+          <a class="nav-link text-dark" href="{{ url_for('home_blueprint.virtual_reality') }}">
             <i class="material-symbols-rounded opacity-10">view_in_ar</i>
             <span class="nav-link-text me-1">الواقع الافتراضي</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active bg-gradient-dark text-white" href="{% url "rtl" %}">
+          <a class="nav-link active bg-gradient-dark text-white" href="{{ url_for('home_blueprint.rtl') }}">
             <i class="material-symbols-rounded opacity-10">format_textdirection_r_to_l</i>
             <span class="nav-link-text me-1">RTL</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url "notifications" %}">
+          <a class="nav-link text-dark" href="{{ url_for('home_blueprint.notifications') }}">
             <i class="material-symbols-rounded opacity-10">notifications</i>
             <span class="nav-link-text me-1">إشعارات</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url "profile" %}">
+          <a class="nav-link text-dark" href="{{ url_for('home_blueprint.profile') }}">
             <i class="material-symbols-rounded opacity-10">person</i>
             <span class="nav-link-text me-1">حساب تعريفي</span>
           </a>
@@ -129,7 +129,7 @@
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img src="{% static "assets/img/team-2.jpg" %}" class="avatar avatar-sm  ms-3 ">
+                        <img src="{{ url_for('static', filename='assets/img/team-2.jpg') }}" class="avatar avatar-sm  ms-3 ">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
@@ -147,7 +147,7 @@
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img src="{% static "assets/img/small-logos/logo-spotify.svg" %}" class="avatar avatar-sm bg-gradient-dark  ms-3 ">
+                        <img src="{{ url_for('static', filename='assets/img/small-logos/logo-spotify.svg') }}" class="avatar avatar-sm bg-gradient-dark  ms-3 ">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
@@ -375,7 +375,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{% static "assets/img/small-logos/logo-xd.svg" %}" class="avatar avatar-sm ms-3">
+                            <img src="{{ url_for('static', filename='assets/img/small-logos/logo-xd.svg') }}" class="avatar avatar-sm ms-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Material XD الإصدار</h6>
@@ -385,16 +385,16 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-1.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-1.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-2.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-2.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-3.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-3.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-4.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}">
                           </a>
                         </div>
                       </td>
@@ -418,7 +418,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{% static "assets/img/small-logos/logo-atlassian.svg" %}" class="avatar avatar-sm ms-3">
+                            <img src="{{ url_for('static', filename='assets/img/small-logos/logo-atlassian.svg') }}" class="avatar avatar-sm ms-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">أضف مسار التقدم إلى التطبيق الداخلي</h6>
@@ -428,10 +428,10 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-2.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-2.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-4.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}">
                           </a>
                         </div>
                       </td>
@@ -455,7 +455,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{% static "assets/img/small-logos/logo-slack.svg" %}" class="avatar avatar-sm ms-3">
+                            <img src="{{ url_for('static', filename='assets/img/small-logos/logo-slack.svg') }}" class="avatar avatar-sm ms-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">إصلاح أخطاء النظام الأساسي</h6>
@@ -465,10 +465,10 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-3.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-3.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-1.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-1.jpg') }}">
                           </a>
                         </div>
                       </td>
@@ -492,7 +492,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{% static "assets/img/small-logos/logo-spotify.svg" %}" class="avatar avatar-sm ms-3">
+                            <img src="{{ url_for('static', filename='assets/img/small-logos/logo-spotify.svg') }}" class="avatar avatar-sm ms-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">إطلاق تطبيق الهاتف المحمول الخاص بنا</h6>
@@ -502,16 +502,16 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-4.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-3.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-3.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-4.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-1.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-1.jpg') }}">
                           </a>
                         </div>
                       </td>
@@ -535,7 +535,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{% static "assets/img/small-logos/logo-jira.svg" %}" class="avatar avatar-sm ms-3">
+                            <img src="{{ url_for('static', filename='assets/img/small-logos/logo-jira.svg') }}" class="avatar avatar-sm ms-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">أضف صفحة التسعير الجديدة</h6>
@@ -545,7 +545,7 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-4.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}">
                           </a>
                         </div>
                       </td>
@@ -569,7 +569,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{% static "assets/img/small-logos/logo-invision.svg" %}" class="avatar avatar-sm ms-3">
+                            <img src="{{ url_for('static', filename='assets/img/small-logos/logo-invision.svg') }}" class="avatar avatar-sm ms-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">إعادة تصميم متجر جديد على الإنترنت</h6>
@@ -579,10 +579,10 @@
                       <td>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-1.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-1.jpg') }}">
                           </a>
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img alt="Image placeholder" src="{% static "assets/img/team-4.jpg" %}">
+                            <img alt="Image placeholder" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}">
                           </a>
                         </div>
                       </td>
@@ -790,7 +790,7 @@
 
   {% include "includes/scripts.html" %}
 
-  <script src="{% static "assets/js/plugins/chartjs.min.js" %}"></script>
+  <script src="{{ url_for('static', filename='assets/js/plugins/chartjs.min.js') }}"></script>
   <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 

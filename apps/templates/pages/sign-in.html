@@ -1,5 +1,5 @@
 {% extends "layouts/base-auth.html" %}
-{% load static %}
+
 
 {% block body %} bg-gray-200 {% endblock body %}  
 
@@ -15,50 +15,42 @@
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
                   <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
-                  <div class="row mt-3">
-                    <div class="col-2 text-center ms-auto">
-                      <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-facebook text-white text-lg"></i>
-                      </a>
-                    </div>
-                    <div class="col-2 text-center px-1">
-                      <a class="btn btn-link px-3" href="javascript:;">
+                  {% if is_github %}
+                  <div class="mt-3">
+                    <div class="text-center px-1">
+                      <a class="btn btn-link px-3" href="{{ url_for('github.login') }}">
                         <i class="fa fa-github text-white text-lg"></i>
                       </a>
                     </div>
-                    <div class="col-2 text-center me-auto">
-                      <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-google text-white text-lg"></i>
-                      </a>
-                    </div>
                   </div>
+                  {% endif %}
                 </div>
               </div>
               <div class="card-body">
-                {% if form.non_field_errors %}
-                  {% for error in form.non_field_errors  %}
-                    <small class="text-danger mb-3">{{ error }}</small>
-                  {% endfor %}
-                {% endif %}
+                {% if msg %}
+                  <span class="d-block text-danger mb-3">{{ msg | safe }}</span>
+                {% endif %} 
                 <form method="post" role="form" class="text-start">
-                  {% csrf_token %}
 
-                  {% for field in form %}
-                    <div class="input-group input-group-outline my-3">
-                      <label class="form-label">{{ field.label }}</label>
-                      {{ field }}
-                    </div>
-                  {% endfor %}
+                  <div class="input-group input-group-outline my-3">
+                    <label class="form-label">Username</label>
+                    {{ form.username(class="form-control") }}
+                  </div>
+                  <div class="input-group input-group-outline my-3">
+                    <label class="form-label">Password</label>
+                    {{ form.password(class="form-control", type="password") }}
+                  </div>
+
                   <div class="form-check form-switch d-flex align-items-center mb-3">
                     <input class="form-check-input" type="checkbox" id="rememberMe" checked>
                     <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign in</button>
+                    <button type="submit" name="login" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign in</button>
                   </div>
                   <p class="mt-4 text-sm text-center">
                     Don't have an account?
-                    <a href="{% url "register" %}" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                    <a href="{{ url_for('authentication_blueprint.register') }}" class="text-primary text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </form>
               </div>
