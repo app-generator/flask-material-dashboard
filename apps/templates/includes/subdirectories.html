@@ -1,0 +1,29 @@
+{% for subdirectory in directory.directories %}
+    {% if subdirectory.directories %}
+        <li 
+            id="collapse{{directory.id}}" 
+            class="ms-{{depth}} collapse show"
+        >
+            <i class="fas fa-folder"></i>
+            <a 
+                data-bs-toggle="collapse" 
+                href="#collapse{{subdirectory.id}}" 
+                role="button" 
+                aria-expanded="false" 
+                aria-controls="collapse{{subdirectory.id}}"
+                onclick="window.location.href = '{% url 'file_manager' subdirectory.path|encoded_path %}';"
+            >
+                {{ subdirectory.name }}
+            </a>
+        </li>
+        {% include 'includes/subdirectories.html' with directory=subdirectory depth=depth|add:"2" %}
+    {% else %}
+        <li 
+            id="collapse{{directory.id}}" 
+            class="ms-{{depth}} collapse show"
+        >
+            <i class="fas fa-folder"></i>
+            <a href="{% url 'file_manager' subdirectory.path|encoded_path %}">{{ subdirectory.name }}</a>
+        </li>
+    {% endif %}
+{% endfor %}

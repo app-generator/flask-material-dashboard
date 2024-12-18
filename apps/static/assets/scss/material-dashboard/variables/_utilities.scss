@@ -89,6 +89,8 @@ $height-600:                        600px !default;
 
 // extra min height values variables - CT
 $min-height-100:                    100px !default;
+$min-height-130:                    130px !default;
+$min-height-140:                    140px !default;
 $min-height-150:                    150px !default;
 $min-height-160:                    160px !default;
 $min-height-200:                    200px !default;
@@ -100,6 +102,8 @@ $min-height-600:                    600px !default;
 
 // extra min height values variables - CT
 $max-height-100:                    100px !default;
+$max-height-130:                    130px !default;
+$max-height-140:                    140px !default;
 $max-height-150:                    150px !default;
 $max-height-160:                    160px !default;
 $max-height-200:                    200px !default;
@@ -180,8 +184,11 @@ $width: (
 // blur effect variables
 $blur-border-radius-rounded:    40px !default;
 $blur-box-shadow:               inset 0px 0px 2px #fefefed1 !default;
-$blur-backdrop-filter:          saturate(200%) blur(30px) !default;
-$blur-backdrop-filter-less:     saturate(20%) blur(30px) !default;
+$blur-backdrop-filter:          saturate(100%) blur(16px) !default;
+$blur-backdrop-filter-less:     saturate(20%) blur(16px) !default;
+
+$navbar-blur-background:        rgba(#fff, .9) !default;
+$navbar-blur-backdrop-filter:   saturate(100%) blur(16px) !default;
 
 $shadow-blur-box-shadow:        inset 0 0px 1px 1px rgba(254, 254, 254, .9), 0 20px 27px 0 rgba(0, 0, 0, .05) !default;
 
