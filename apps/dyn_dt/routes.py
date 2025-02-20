@@ -13,7 +13,8 @@ from datetime import datetime
 def dynamic_dt():
     context = {
         'routes': config.Config.DYNAMIC_DATATB.keys(),
-        'segment': 'dynamic_dt'
+        'segment': 'dynamic_dt',
+        'parent': 'dashboard'
     }
     return render_template('dyn_dt/index.html', **context)
 
@@ -167,6 +168,7 @@ def model_dt(aPath):
         'fk_fields_keys': fk_fields.keys(),
         'fk_fields': fk_fields,
         'segment': 'dynamic_dt',
+        'parent': 'dashboard',
         'choices_dict': choices_dict,
         'exclude_auto_gen_fields': exclude_auto_gen_fields(aModelClass)
     }
