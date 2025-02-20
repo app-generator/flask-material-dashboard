@@ -170,6 +170,7 @@ def model_dt(aPath):
         'segment': 'dynamic_dt',
         'parent': 'dashboard',
         'choices_dict': choices_dict,
+        'model_name':aModelName,
         'exclude_auto_gen_fields': exclude_auto_gen_fields(aModelClass)
     }
     return render_template('dyn_dt/model.html', **context)
