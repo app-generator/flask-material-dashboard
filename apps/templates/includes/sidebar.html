@@ -11,11 +11,28 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link {% if 'dashboard' == segment %} active bg-gradient-dark text-white {% else %} text-dark {% endif %}" href="{{ url_for('home_blueprint.index') }}">
+          <a data-bs-toggle="collapse" href="#dashboardExamples" class="nav-link text-dark {% if parent == 'dashboard' %}active{% endif %}" aria-controls="dashboardExamples" role="button" aria-expanded="false">
             <i class="material-symbols-rounded opacity-5">dashboard</i>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1 ps-1">Dashboard</span>
           </a>
+          <div class="collapse {% if parent == 'dashboard' %}show{% endif %}" id="dashboardExamples">
+            <ul class="nav ">
+              <li class="nav-item {% if segment == 'dashboard' %}active{% endif %}">
+                <a class="nav-link text-dark {% if segment == 'dashboard' %}active{% endif %}" href="{{ url_for('home_blueprint.index') }}">
+                  <span class="sidenav-mini-icon"> D </span>
+                  <span class="sidenav-normal  ms-1  ps-1"> Default </span>
+                </a>
+              </li>
+              <li class="nav-item {% if segment == 'dynamic_dt' %}active{% endif %}">
+                <a class="nav-link text-dark {% if segment == 'dynamic_dt' %}active{% endif %}" href="{{ url_for('table_blueprint.dynamic_dt') }}">
+                  <span class="sidenav-mini-icon"> D </span>
+                  <span class="sidenav-normal  ms-1  ps-1"> Dynamic DT </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
+
         <li class="nav-item">
           <a class="nav-link {% if 'tables' == segment %} active bg-gradient-dark text-white {% else %} text-dark {% endif %}" href="{{ url_for('home_blueprint.tables') }}">
             <i class="material-symbols-rounded opacity-5">table_view</i>

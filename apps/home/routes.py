@@ -15,7 +15,7 @@ from apps.tasks import *
 @blueprint.route('/')
 @blueprint.route('/index')
 def index():
-    return render_template('pages/index.html', segment='dashboard')
+    return render_template('pages/index.html', segment='dashboard', parent='dashboard')
 
 @blueprint.route('/tables')
 def tables():
