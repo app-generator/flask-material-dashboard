@@ -4,16 +4,18 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from apps.home import blueprint
-from flask import render_template, request, url_for, redirect
-from flask_login import login_required, current_user
+from flask import render_template, request, redirect, url_for
+from flask_login import login_required
 from jinja2 import TemplateNotFound
-from apps import db
+from flask_login import login_required, current_user
+from apps import db, config
+from apps.models import *
+from apps.tasks import *
 
+@blueprint.route('/')
 @blueprint.route('/index')
-@login_required
 def index():
     return render_template('pages/index.html', segment='dashboard')
-
 
 @blueprint.route('/tables')
 def tables():

@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.13] 2025-02-20
+### Changes
+
+- Update deps
+- Codebase Update 
+- Links CleanUp 
+- Added Dynamic DataTable 
+
 ## [1.0.12] 2024-11-21
 ### Changes
 

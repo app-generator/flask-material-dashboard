@@ -10,19 +10,14 @@ from flask_login import (
     logout_user
 )
 from flask_dance.contrib.github import github
-from apps.config import Config
+
 from apps import db, login_manager
 from apps.authentication import blueprint
 from apps.authentication.forms import LoginForm, CreateAccountForm
 from apps.authentication.models import Users
+from apps.config import Config
 
 from apps.authentication.util import verify_pass
-
-
-@blueprint.route('/')
-def route_default():
-    return redirect(url_for('authentication_blueprint.login'))
-
 
 # Login & Registration
 
@@ -35,31 +30,42 @@ def login_github():
     res = github.get("/user")
     return redirect(url_for('home_blueprint.index'))
 
+
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     login_form = LoginForm(request.form)
     if 'login' in request.form:
 
         # read form data
-        username = request.form['username']
+        user_id  = request.form['username'] # we can have here username OR email
         password = request.form['password']
 
         # Locate user
-        user = Users.query.filter_by(username=username).first()
+        user = Users.find_by_username(user_id)
+
+        # if user not found
+        if not user:
+
+            user = Users.find_by_email(user_id)
+
+            if not user:
+                return render_template( 'authentication/login.html',
+                                        msg='Unknown User or Email',
+                                        form=login_form)
 
         # Check the password
-        if user and verify_pass(password, user.password):
+        if verify_pass(password, user.password):
 
             login_user(user)
-            return redirect(url_for('authentication_blueprint.route_default'))
+            return redirect(url_for('home_blueprint.index'))
 
         # Something (user or pass) is not ok
-        return render_template('pages/sign-in.html',
+        return render_template('authentication/login.html',
                                msg='Wrong user or password',
                                form=login_form)
 
     if not current_user.is_authenticated:
-        return render_template('pages/sign-in.html',
+        return render_template('authentication/login.html',
                                form=login_form)
     return redirect(url_for('home_blueprint.index'))
 
@@ -75,7 +81,7 @@ def register():
         # Check usename exists
         user = Users.query.filter_by(username=username).first()
         if user:
-            return render_template('pages/sign-up.html',
+            return render_template('authentication/register.html',
                                    msg='Username already registered',
                                    success=False,
                                    form=create_account_form)
@@ -83,7 +89,7 @@ def register():
         # Check email exists
         user = Users.query.filter_by(email=email).first()
         if user:
-            return render_template('pages/sign-up.html',
+            return render_template('authentication/register.html',
                                    msg='Email already registered',
                                    success=False,
                                    form=create_account_form)
@@ -95,48 +101,30 @@ def register():
 
         # Delete user from session
         logout_user()
-        
-        return render_template('pages/sign-up.html',
-                               msg='Account created successfully.',
+
+        return render_template('authentication/register.html',
+                               msg='User created successfully.',
                                success=True,
                                form=create_account_form)
 
     else:
-        return render_template('pages/sign-up.html', form=create_account_form)
+        return render_template('authentication/register.html', form=create_account_form)
 
 
 @blueprint.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('authentication_blueprint.login'))
-
+    return redirect(url_for('home_blueprint.index'))
 
 # Errors
 
-
 @blueprint.context_processor
-def is_github():
+def has_github():
     if Config.GITHUB_ID and Config.GITHUB_SECRET:
-        return {'is_github': True}
+        return {'has_github': True}
     
-    return {'is_github': False}
-
+    return {'has_github': False}
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
     return redirect('/login')
-
-
-@blueprint.errorhandler(403)
-def access_forbidden(error):
-    return render_template('home/page-403.html'), 403
-
-
-@blueprint.errorhandler(404)
-def not_found_error(error):
-    return render_template('home/page-404.html'), 404
-
-
-@blueprint.errorhandler(500)
-def internal_error(error):
-    return render_template('home/page-500.html'), 500

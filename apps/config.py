@@ -3,20 +3,31 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-import os, random, string
+import os
 
 class Config(object):
 
     basedir = os.path.abspath(os.path.dirname(__file__))
 
+    # for Product model
+    CURRENCY     = { 'usd' : 'usd' , 'eur' : 'eur' }
+    STATE        = { 'completed' : 1 , 'pending' : 2, 'refunded' : 3 }
+    PAYMENT_TYPE = { 'cc' : 1 , 'paypal' : 2, 'wire' : 3 }
+    
+    USERS_ROLES  = { 'ADMIN'  :1 , 'USER'      : 2 }
+    USERS_STATUS = { 'ACTIVE' :1 , 'SUSPENDED' : 2 }
+    
     # Assets Management
-    ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')
+    ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')  
+    
+    # celery 
+    CELERY_BROKER_URL     = "redis://localhost:6379"
+    CELERY_RESULT_BACKEND = "redis://localhost:6379"
+    CELERY_HOSTMACHINE    = "celery@app-generator"
 
     # Set up the App SECRET_KEY
-    SECRET_KEY  = os.getenv('SECRET_KEY', None)
-    if not SECRET_KEY:
-        SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))    
-    
+    SECRET_KEY  = os.getenv('SECRET_KEY', 'S3cret_999')
+
     # Social AUTH context
     SOCIAL_AUTH_GITHUB  = False
 
@@ -25,7 +36,7 @@ class Config(object):
 
     # Enable/Disable Github Social Login    
     if GITHUB_ID and GITHUB_SECRET:
-         SOCIAL_AUTH_GITHUB  = True   
+         SOCIAL_AUTH_GITHUB  = True        
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -63,8 +74,12 @@ class Config(object):
     if USE_SQLITE:
 
         # This will create a file in <app> FOLDER
-        SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite3') 
-    
+        SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite3')
+
+    DYNAMIC_DATATB = {
+        "products": "apps.models.Product"
+    }
+
 class ProductionConfig(Config):
     DEBUG = False
 
@@ -73,10 +88,8 @@ class ProductionConfig(Config):
     REMEMBER_COOKIE_HTTPONLY = True
     REMEMBER_COOKIE_DURATION = 3600
 
-
 class DebugConfig(Config):
     DEBUG = True
-
 
 # Load all possible configurations
 config_dict = {
