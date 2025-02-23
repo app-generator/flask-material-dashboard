@@ -132,16 +132,16 @@
                             <div class="mb-3" id="inputContainer">
                                 {% if filter_instance %}
                                     {% for filter_data in filter_instance %}
-                                    <div class="d-flex gap-3 mb-3">
+                                    <div class="input-container d-flex align-items-center gap-3 mb-3">
                                         <div class="d-flex gap-2">
-                                            <select name="key" id="" class="form-select border px-2 w-50">
+                                            <select name="key" class="form-select border px-2 w-50">
                                                 {% for field in db_field_names %}
                                                     <option {% if filter_data.key == field %}selected{% endif %} value="{{ field }}">{{ field }}</option>
                                                 {% endfor %}
                                             </select>
-                                            <input type="text" value="{{ filter_data.value }}" placeholder="Enter value" name="value" id="" class="form-control border px-2">
+                                            <input name="value" value="{{ filter_data.value }}" class="form-control border px-2" type="text" placeholder="Enter value">
                                         </div>
-                                        <a href="{{ url_for('table_blueprint.delete_filter', model_name=link, id=filter_data.id) }}" class="remove-button btn btn-danger">X</a>
+                                        <a href="{{ url_for('table_blueprint.delete_filter', model_name=link, id=filter_data.id) }}" class="remove-button btn btn-danger mb-0">X</a>
                                     </div>
                                     {% endfor %}
                                 {% endif %}
@@ -569,7 +569,7 @@
                 </select>
                 <input name="value" class="form-control border px-2" type="text" placeholder="Enter value">
             </div>
-            <button class="remove-button btn btn-danger" onclick="removeInputContainer(this)">X</button>
+            <button class="remove-button btn btn-danger mb-0" onclick="removeInputContainer(this)">X</button>
         </div>
       `;
   
