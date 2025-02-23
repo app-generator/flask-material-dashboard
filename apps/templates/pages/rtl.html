@@ -61,13 +61,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/sign-in.html">
+          <a class="nav-link text-dark" href="{{ url_for('authentication_blueprint.login') }}">
             <i class="material-symbols-rounded opacity-10">login</i>
             <span class="nav-link-text me-1">تسجيل الدخول</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/sign-up.html">
+          <a class="nav-link text-dark" href="{{ url_for('authentication_blueprint.register') }}">
             <i class="material-symbols-rounded opacity-10">assignment</i>
             <span class="nav-link-text me-1">اشتراك</span>
           </a>

@@ -63,6 +63,24 @@
             <span class="nav-link-text ms-1">Notifications</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {% if 'map' == segment %} active bg-gradient-dark text-white {% else %} text-dark {% endif %}" href="{{ url_for('home_blueprint.map') }}">
+            <i class="material-symbols-rounded opacity-5">map</i>
+            <span class="nav-link-text ms-1">Map</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if 'icons' == segment %} active bg-gradient-dark text-white {% else %} text-dark {% endif %}" href="{{ url_for('home_blueprint.icons') }}">
+            <i class="material-symbols-rounded opacity-5">flag</i>
+            <span class="nav-link-text ms-1">Icons</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if 'typography' == segment %} active bg-gradient-dark text-white {% else %} text-dark {% endif %}" href="{{ url_for('home_blueprint.typography') }}">
+            <i class="material-symbols-rounded opacity-5">title</i>
+            <span class="nav-link-text ms-1">Typography</span>
+          </a>
+        </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account pages</h6>
         </li>
