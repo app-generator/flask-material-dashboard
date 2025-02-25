@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 
 from flask_login import UserMixin
 
-from sqlalchemy.orm import relationship
+from sqlalchemy.exc import SQLAlchemyError, IntegrityError
 from flask_dance.consumer.storage.sqla import OAuthConsumerMixin
 
 from apps import db, login_manager
@@ -26,6 +26,7 @@ class Users(db.Model, UserMixin):
     password      = db.Column(db.LargeBinary)
 
     oauth_github  = db.Column(db.String(100), nullable=True)
+    oauth_google  = db.Column(db.String(100), nullable=True)
 
     def __init__(self, **kwargs):
         for property, value in kwargs.items():
@@ -65,7 +66,7 @@ class Users(db.Model, UserMixin):
             db.session.rollback()
             db.session.close()
             error = str(e.__dict__['orig'])
-            raise InvalidUsage(error, 422)
+            raise IntegrityError(error, 422)
     
     def delete_from_db(self) -> None:
         try:
@@ -75,7 +76,7 @@ class Users(db.Model, UserMixin):
             db.session.rollback()
             db.session.close()
             error = str(e.__dict__['orig'])
-            raise InvalidUsage(error, 422)
+            raise IntegrityError(error, 422)
         return
 
 @login_manager.user_loader
