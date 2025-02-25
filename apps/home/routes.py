@@ -57,6 +57,44 @@ def notifications():
     }
     return render_template('pages/notifications.html', **context)
 
+@blueprint.route('/icons')
+def icons():
+    context = {
+        'segment': 'icons'
+    }
+    return render_template('pages/icons.html', **context)
+
+
+@blueprint.route('/map')
+def map():
+    context = {
+        'segment': 'map'
+    }
+    return render_template('pages/map.html', **context)
+
+@blueprint.route('/typography')
+def typography():
+    context = {
+        'segment': 'typography'
+    }
+    return render_template('pages/typography.html', **context)
+
+@blueprint.route('/template')
+def template():
+    context = {
+        'segment': 'template'
+    }
+    return render_template('pages/template.html', **context)
+
+
+@blueprint.route('/landing')
+def landing():
+    context = {
+        'segment': 'landing'
+    }
+    return render_template('pages/landing.html', **context)
+
+
 @blueprint.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
