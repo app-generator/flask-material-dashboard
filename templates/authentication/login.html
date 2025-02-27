@@ -24,6 +24,15 @@
                     </div>
                   </div>
                   {% endif %}
+                  {% if has_google %}
+                  <div class="mt-3">
+                    <div class="text-center px-1">
+                      <a class="btn btn-link px-3" href="{{ url_for('google.login') }}">
+                        <i class="fab fa-google text-white text-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                  {% endif %}
                 </div>
               </div>
               <div class="card-body">
