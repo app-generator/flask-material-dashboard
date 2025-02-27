@@ -18,15 +18,14 @@ class Users(db.Model, UserMixin):
 
     id            = db.Column(db.Integer, primary_key=True)
     username      = db.Column(db.String(64), unique=True)
-    first_name    = db.Column(db.String(100), nullable=True)
-    last_name     = db.Column(db.String(100), nullable=True)
-    address       = db.Column(db.String(100), nullable=True)
-    bio           = db.Column(db.String(200), nullable=True)
     email         = db.Column(db.String(64), unique=True)
     password      = db.Column(db.LargeBinary)
+    bio           = db.Column(db.Text(), nullable=True)
 
     oauth_github  = db.Column(db.String(100), nullable=True)
     oauth_google  = db.Column(db.String(100), nullable=True)
+
+    readonly_fields = ["id", "username", "email", "oauth_github", "oauth_google"]
 
     def __init__(self, **kwargs):
         for property, value in kwargs.items():
