@@ -32,3 +32,4 @@ apps/static/assets/yarn.lock
 apps/static/assets/.temp
 
 node_modules/
+README_bk.md
