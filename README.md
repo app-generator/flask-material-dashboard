@@ -54,19 +54,6 @@ The product is designed to deliver the best possible user experience with highly
 
 <br />
 
-## [Material Dashboard PRO Version](https://app-generator.dev/product/material-dashboard-pro/flask/)
-
-> The premium version provides more features, priority on support, and is more often updated - [Live Demo](https://flask-material-dashboard2-pro.appseed-srv1.com).
-
-- **Simple, Easy-to-Extend** Codebase
-- **Material Dashboard PRO** Design - Premium Version 
-- **Docker**
-- **Deployment-Ready** for Render 
-
-![Datta Able PRO - Full-Stack Flask Starter provided by App-Generator.](https://user-images.githubusercontent.com/51070104/170474361-a58da82b-fff9-4a59-81a8-7ab99f478f48.png)
-
-<br />
-
 ## `Customize` with [Flask Generator](https://app-generator.dev/tools/flask-generator/)
 
 - Access the [Flask Generator](https://app-generator.dev/tools/flask-generator/)
