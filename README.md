@@ -39,6 +39,19 @@ The product is designed to deliver the best possible user experience with highly
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
+<br /> 
+
+## [Material Dashboard PRO Version](https://app-generator.dev/product/material-dashboard-pro/flask/)
+
+> The premium version provides more features, priority on support, and is more often updated.
+
+- **Simple, Easy-to-Extend** Codebase
+- **Material Dashboard** Design - PRO Version
+- Bootstrap 4 CSS
+- **Deployment-Ready** for Render 
+
+![Flask Material PRO - Premium Flask starter built with Material Dashboard design from Creative-Tim](https://github.com/user-attachments/assets/6d45cb15-76e7-4b87-81bc-81ca71c96faf)
+
 <br />
 
 ## `Customize` with [Flask Generator](https://app-generator.dev/tools/flask-generator/)
