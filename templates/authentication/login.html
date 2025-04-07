@@ -15,24 +15,26 @@
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
                   <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
-                  {% if has_github %}
-                  <div class="mt-3">
-                    <div class="text-center px-1">
-                      <a class="btn btn-link px-3" href="{{ url_for('github.login') }}">
-                        <i class="fa fa-github text-white text-lg"></i>
-                      </a>
+                  <div class="d-flex justify-content-center align-items-center">
+                    {% if has_github %}
+                    <div class="mt-3">
+                      <div class="text-center px-1">
+                        <a class="btn btn-link px-3" href="{{ url_for('github.login') }}">
+                          <i class="fa fa-github text-white text-lg"></i>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  {% endif %}
-                  {% if has_google %}
-                  <div class="mt-3">
-                    <div class="text-center px-1">
-                      <a class="btn btn-link px-3" href="{{ url_for('google.login') }}">
-                        <i class="fab fa-google text-white text-lg"></i>
-                      </a>
+                    {% endif %}
+                    {% if has_google %}
+                    <div class="mt-3">
+                      <div class="text-center px-1">
+                        <a class="btn btn-link px-3" href="{{ url_for('google.login') }}">
+                          <i class="fab fa-google text-white text-lg"></i>
+                        </a>
+                      </div>
                     </div>
+                    {% endif %}
                   </div>
-                  {% endif %}
                 </div>
               </div>
               <div class="card-body">

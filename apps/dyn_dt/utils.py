@@ -1,3 +1,8 @@
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
+
 import importlib
 from sqlalchemy import or_
 from sqlalchemy import DateTime, func

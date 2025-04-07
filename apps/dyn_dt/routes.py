@@ -1,3 +1,8 @@
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
+
 import json, csv, io
 from flask_login import login_required
 from apps.dyn_dt import blueprint
@@ -13,8 +18,7 @@ from datetime import datetime
 def dynamic_dt():
     context = {
         'routes': config.Config.DYNAMIC_DATATB.keys(),
-        'segment': 'dynamic_dt',
-        'parent': 'dashboard'
+        'segment': 'dynamic_dt'
     }
     return render_template('dyn_dt/index.html', **context)
 
@@ -168,9 +172,7 @@ def model_dt(aPath):
         'fk_fields_keys': fk_fields.keys(),
         'fk_fields': fk_fields,
         'segment': 'dynamic_dt',
-        'parent': 'dashboard',
         'choices_dict': choices_dict,
-        'model_name':aModelName,
         'exclude_auto_gen_fields': exclude_auto_gen_fields(aModelClass)
     }
     return render_template('dyn_dt/model.html', **context)
